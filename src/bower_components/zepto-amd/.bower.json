@@ -1,0 +1,15 @@
+{
+  "name": "zepto-amd",
+  "homepage": "https://github.com/MichaelHu/zepto",
+  "version": "10.0.1",
+  "_release": "10.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v10.0.1",
+    "commit": "9ad549d168b51d9ebc1c72e54379b934696ea285"
+  },
+  "_source": "git://github.com/MichaelHu/zepto.git",
+  "_target": "~10.0.1",
+  "_originalSource": "zepto-amd",
+  "_direct": true
+}

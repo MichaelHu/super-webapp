@@ -1,0 +1,25 @@
+{
+  "name": "super-webapp",
+  "version": "0.0.1",
+  "description": "A webapp to show web technology",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichaelHu/super-webapp.git"
+  },
+  "keywords": [
+    "webapp",
+    "javascript",
+    "html5",
+    "css3"
+  ],
+  "author": "hdm258i@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MichaelHu/super-webapp/issues"
+  },
+  "homepage": "https://github.com/MichaelHu/super-webapp"
+}

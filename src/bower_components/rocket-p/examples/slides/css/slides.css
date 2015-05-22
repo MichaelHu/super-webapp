@@ -1,0 +1,53 @@
+#wrapper{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    -webkit-perspective: 5000px;
+}
+
+.slide {
+    display:none;
+
+    position:absolute;
+
+    /*撑满整个父容器*/
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    overflow: scroll;
+
+    /*最低高度，确保即使没内容，loading也可以展示，同时能遮住下方内容*/
+    /*
+    min-height:600px;
+    */
+
+    /*阻止文本选中*/
+    -webkit-user-select:none;
+
+    background-color: #fff;
+    text-align: center;
+}
+
+.slide .view-count {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font: normal normal normal 14px/20px Arial;
+    border-radius: 10px; 
+    border: 1px solid green;
+}
+
+.slide img {
+    max-width: 100%;
+}
+
+#slide1 { background-color: #993; }
+#slide2 { background-color: #ffc; }
+#slide3 { background-color: #c9c; }
+#slide4 { background-color: #cff; }
+#slide5 { background-color: #fcc; }

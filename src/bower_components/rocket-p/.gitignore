@@ -1,0 +1,8 @@
+*.swp
+.DS_Store
+.svn
+*.bak
+
+output/
+/node_modules/
+/bower_components/

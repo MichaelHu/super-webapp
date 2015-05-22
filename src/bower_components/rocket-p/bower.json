@@ -1,0 +1,24 @@
+{
+  "name": "rocket-p",
+  "version": "0.0.2",
+  "homepage": "https://github.com/MichaelHu/rocket-p",
+  "authors": [
+    "hudamin <hdm258i@gmail.com>"
+  ],
+  "description": "a fast webapp framework",
+  "main": "dist/rocket-p.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "webapp",
+    "html5",
+    "css3",
+    "mobile",
+    "javascript"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "~1.8.3"
+  }
+}
