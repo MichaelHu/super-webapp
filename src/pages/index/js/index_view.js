@@ -1,17 +1,17 @@
-define(['require', 'jquery', 'bootstrap', 'rocket-p'], function (require, $) {
-
-var Rocket = require('rocket-p');
+define([
+        'require'
+        , 'jquery'
+        , 'bootstrap'
+        , 'rocket-p'
+        , 'text!./pages/index/html/index.html'
+        , 'css!./bower_components/bootstrap/dist/css/bootstrap.min.css'
+        , 'css!./bower_components/bootstrap/dist/css/bootstrap-theme.min.css'
+    ], function (require, $, B, Rocket, html) {
 
 var indexPageView = Rocket.PageView.extend({
 
     init: function (options) {
-        this.$el.html([
-            '<h1>Hello, I\'m index page</h1>'
-            , '<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">'
-            ,       'Loading state'
-            , '</button>'
-        ].join(''));          
-
+        this.$el.html(html);
         this.$loadingBtn = this.$('#myButton');
     }
 
@@ -34,8 +34,6 @@ Rocket.Router.registerViewClass(
     , indexPageView 
 );
 
-Rocket.Router.routes['index'] = '_defaultHandler:index';
-Rocket.Router.routes[''] = '_defaultHandler:index';
-
+return indexPageView;
     
 });

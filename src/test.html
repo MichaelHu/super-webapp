@@ -6,11 +6,23 @@
     <meta name="viewport" content="width=320.1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" type="text/css" href="./bower_components/normalize.css/normalize.css" />
+
 </head>
 <body>
     <div id="wrapper"></div>
 </body>
 </html>
-<script type="text/javascript" data-main="main" src="./bower_components/requirejs/require.js"></script>
+<script type="text/javascript" src="./bower_components/requirejs/require.js"></script>
 <script>
+require.config({
+    baseUrl: '.'
+    , paths: {
+        'zrender': './lib/zrender/zrender'
+    }
+});
+
+require(['zrender', 'zrender/shape/Circle'], function(zrender){
+    console.log(zrender);
+    var Circle = require('zrender/shape/Circle');
+});
 </script> 

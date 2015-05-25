@@ -1,50 +1,34 @@
 ({
     baseUrl: './src'
     , dir: './dist'
+    // , studModules: [ 'text', 'css' ]
     , modules: [
         {
+            name: 'rocket-p'
+            // Include requirejs plugins into rocket-p module
+            , include: [
+                // Use relative module IDs, then requirejs map 
+                // config is no need to be modified 
+                './bower_components/require-css/css'
+                , './bower_components/requirejs-text/text'
+            ]
+        }
+        , {
             name: 'main'
             , exclude: [ 'rocket-p' ]
         }
         , {
-            name: 'rocket-p'
-            , out: './bower_components/rocket-p/dist/rocket-p'
+            name: 'index_pageview'
+            , exclude: [ 'rocket-p' ]
         }
     ]
     , optimize: 'none'
     , skipDirOptimize: true
     , removeCombined: true
-    // , fileExclusionRegExp: /src/
+    // , fileExclusionRegExp: /bower_components.*(src|test|examples|grunt|node_modules).*/
 
 
     // Avoid duplicating config content into build.js
     , mainConfigFile: './src/main.js'
 
-    // , paths: {
-    //     'zepto': './bower_components/zepto-amd/dist/zepto'
-    //     , 'jquery': './bower_components/jquery/dist/jquery'
-    //     , 'bootstrap': './bower_components/bootstrap/dist/js/bootstrap'
-    //     , 'underscore': './bower_components/underscore/underscore'
-    //     , 'rocket-p': './bower_components/rocket-p/dist/rocket-p'
-    //     , 'main': 'main'
-    // }
-    
-    // , shim: {
-    //     'bootstrap': {
-    //         deps: ['jquery']
-    //     }
-    // }
-    //
-
-    , onModuleBundleComplete: function (data) {
-        /*
-        data.name: the bundle name.
-        data.path: the bundle path relative to the output directory.
-        data.included: an array of items included in the build bundle.
-        If a file path, it is relative to the output directory. Loader
-        plugin IDs are also included in this array, but depending
-        on the plugin, may or may not have something inlined in the
-        module bundle.
-        */
-    }
 })

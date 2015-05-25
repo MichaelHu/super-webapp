@@ -3,14 +3,34 @@
 require.config({
     baseUrl: '.'
     , waitSeconds: 0 // disable timeout check
+
     , paths: {
         'zepto': './bower_components/zepto-amd/dist/zepto'
         , 'jquery': './bower_components/jquery/dist/jquery'
         , 'bootstrap': './bower_components/bootstrap/dist/js/bootstrap'
         , 'underscore': './bower_components/underscore/underscore'
         , 'rocket-p': './bower_components/rocket-p/dist/rocket-p'
+
+        , 'index_pageview': './pages/index/js/index_view'
+        , 'css3demos_pageview': './pages/css3demos/js/css3demos_view'
+        , 'zrender_pageview': './pages/zrender/js/zrender_view'
+        , 'magic_animation_pageview': './pages/magic_animation/js/magic_animation_view'
+
         , 'main': 'main'
     }
+    , map: {
+        '*': {
+            'css': './bower_components/require-css/css'
+            , 'text': './bower_components/requirejs-text/text'
+        }
+    }
+    , packages: [
+        {
+            name: 'zrender'
+            , location: './lib/zrender'
+            , main: 'zrender'
+        }
+    ]
     , shim: {
         'bootstrap': {
             deps: ['jquery']
@@ -21,21 +41,27 @@ require.config({
 
 require([
         'rocket-p'
-        , './pages/index/js/index_view'
-        , './pages/css3demos/js/css3demos_view'
     ]
     , function(Rocket){
 
 
-Rocket.Router.routes['*anything'] = '_defaultHandler:index';
+// Rocket.Router.routes['*anything'] = '_defaultHandler:index';
 
 function init(){
 
     var AppRouter = Rocket.Router.extend({
 
+        routes: {
+            'index': '_defaultHandler:index'
+            , 'css3demos': '_defaultHandler:css3demos'
+            , 'zrender': '_defaultHandler:zrender'
+            , 'magic_animation': '_defaultHandler:magic_animation'
+            , '*anything': '_defaultHandler:index'
+        }
+
         // TB
         // , defaultPageTransition: 'flipTB'
-        defaultPageTransition: 'slideTB'
+        , defaultPageTransition: 'slideTB'
         // , defaultPageTransition: 'slidefadeTB'
         // , defaultPageTransition: 'rotatecubeTB'
         // , defaultPageTransition: 'scaledownupscaleup'

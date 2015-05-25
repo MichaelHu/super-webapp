@@ -1,0 +1,157 @@
+.magic-animation { 
+    overflow: hidden;
+    background: #003973;
+    background: -webkit-linear-gradient(90deg, #556270 10%, #FF6B6B 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg, #556270 10%, #FF6B6B 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #556270 10%, #FF6B6B 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #556270 10%, #FF6B6B 90%); /* Opera 11.10+ */
+    background:         linear-gradient(90deg, #556270 10%, #FF6B6B 90%); /* W3C */     
+}
+
+.magic-animation h1, 
+.magic-animation h2, 
+.magic-animation h3, 
+.magic-animation h4, 
+.magic-animation h5, 
+.magic-animation h6 { 
+    margin: 1em 0 0 0;
+    padding: 1em 0 0 0;
+    font-weight: inherit;
+    line-height: 1.4em;
+    clear: both;
+}
+.magic-animation h1 { font-size: 2.457em; }
+.magic-animation h2 { font-size: 2.169em; }
+.magic-animation h3 { font-size: 1.877em; }
+.magic-animation h4 { font-size: 1.433em; }
+.magic-animation h5 { font-size: 1.322em; }
+.magic-animation h6 { font-size: 1.211em; }
+
+
+
+#cssoptions { width: 70%; padding: 60px 4%; float: right; position: relative; }
+#cssoptions h3 { font-weight: 100; color: #369; }
+#cssoptions .btn { display: block; float: left; margin: 10px 10px 10px 0; padding: 12px 18px; background: #333; background: rgba(0,0,0,0.3); border: 2px solid #fff; color: #fff;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+cursor: pointer;
+}
+#cssoptions .btn:hover { background: #333; background: rgba(0,0,0,0.6); }
+a.gitbtn { display: block; float: left; margin: 10px 10px 10px 0; padding: 12px 18px; background: #000; color: #fff;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+cursor: pointer;
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+#magic_animation_timing {
+-webkit-animation-duration: 1s;
+-moz-animation-duration: 1s;
+-o-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+-moz-animation-fill-mode: both;
+-o-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+
+
+
+
+#magic_animation_testbox { 
+    width: 30%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    height: auto;
+}
+#magic_animation_testbox #magic_animation_retrobox { width: 100px; height: 100px; left: 12%; position: fixed; z-index: 12; top: 200px; text-align: center; line-height: 100px; font-size: 2em; border: 2px solid #fff;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+-webkit-transform: translate3d(0, 0, 0);
+transform : translate3d(0, 0, 0);
+}
+#magic_animation_testbox #magic_animation_timing { 
+    width: 100px;
+    height: 100px;
+    left: 12%;
+    position: fixed;
+    top: 200px;
+    z-index: 13;
+    text-align: center;
+    line-height: 100px;
+    font-size: 2.4em;
+    background: #000;
+    color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#magic_animation_testbox #magic_animation_timing:after{ 
+    content: 'M'
+}
+
+
+
+@media (max-width:1214px) {
+}
+
+@media (max-width:1025px) { /* big landscape tablets, laptops, and desktops */
+}
+
+@media (max-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (max-width:786px) { /* for google ads responsive new code 2014 */
+
+#magic_animation_testbox { width: 100%;
+    float: none;
+    height: 160px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #333;
+    background: rgba(0,0,0,0.6);
+}
+#magic_animation_testbox #magic_animation_retrobox { width: 20%;
+    height: 80px;
+    left: auto;
+    top: 60px;
+    left: 40%;
+    line-height: 80px;
+    font-size: 1.8em;
+}
+#magic_animation_testbox #magic_animation_timing { width: 20%; height: 80px; left: auto; top: 60px; left: 40%; line-height: 80px; font-size: 1.8em; }
+
+#cssoptions { top: 160px; padding: 60px 4% 200px 4%; }
+#cssoptions { width: 100%; float: none; top: 100px; text-align: center; }
+
+
+}
+
+@media (max-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+#cssoptions .btn { float: none; }
+}
+
+@media (max-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+#cssoptions { top: 160px; }
+#cssoptions .btn { margin: 6px 6px 6px 0; padding: 6px 9px; }
+}
+
+@media (max-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */
+}

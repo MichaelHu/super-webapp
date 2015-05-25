@@ -13,7 +13,8 @@ Rocket.Router.registerViewClass(
     , css3demosPageView 
 );
 
-Rocket.Router.routes['css3demos'] = '_defaultHandler:css3demos';
+return css3demosPageView;
+
     
 });
 
