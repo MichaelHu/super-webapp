@@ -4,8 +4,6 @@ define([
         , 'bootstrap'
         , 'text!./pages/index/html/index.html'
         , 'text!./pages/index/data/index.json'
-        , 'css!./bower_components/bootstrap/dist/css/bootstrap.min.css'
-        , 'css!./bower_components/bootstrap/dist/css/bootstrap-theme.min.css'
         , 'css!./pages/index/css/index.css'
     ], function (require, Rocket, B, html, data) {
 

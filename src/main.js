@@ -33,7 +33,11 @@ require.config({
     ]
     , shim: {
         'bootstrap': {
-            deps: ['jquery']
+            deps: [
+                'jquery'
+                , 'css!./bower_components/bootstrap/dist/css/bootstrap.min.css'
+                , 'css!./bower_components/bootstrap/dist/css/bootstrap-theme.min.css'
+            ]
         }
     }
 });
@@ -44,8 +48,14 @@ require([
     ]
     , function(Rocket){
 
+// CSS and TEXT plugins are avalable from now on
+require(['bootstrap'], function(){
 
-// Rocket.Router.routes['*anything'] = '_defaultHandler:index';
+    require('zepto')('#main_nav').show();
+    init();
+
+});
+
 
 function init(){
 
@@ -99,9 +109,6 @@ function init(){
 
     appRouter.start();
 }
-
-
-init();
 
 
 

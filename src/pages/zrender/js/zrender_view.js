@@ -1,8 +1,10 @@
 define([
         'require'
-        , 'jquery'
         , 'rocket-p'
-    ], function (require, $, Rocket, Z) {
+        , 'bootstrap'
+    ], function (require, Rocket) {
+
+var $ = require('zepto');
 
 var zrenderPageView = Rocket.PageView.extend({
 

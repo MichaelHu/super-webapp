@@ -1,17 +1,18 @@
 {
 "data": [
     {
+        "title": "Magic Animation"
+        , "url": "magic_animation" 
+        , "imgurl": "./pages/index/img/magic_animation.png"
+        , "abs": "流行CSS3动画特效库，提供65种动画特效。使用方便。"
+    }
+
+    , {
         "title": "zRender Demo"
         , "url": "zrender" 
         , "imgurl": "./pages/index/img/zrender.png"
         , "abs": "zRender是一个Canvas类库，支持快速绘制基本形状"
     }
 
-    , {
-        "title": "Magic Animation"
-        , "url": "magic_animation" 
-        , "imgurl": "./pages/index/img/magic_animation.png"
-        , "abs": "流行CSS3动画特效库，提供65种动画特效。使用方便。"
-    }
 ]
 }

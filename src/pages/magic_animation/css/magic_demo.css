@@ -123,7 +123,7 @@ transform : translate3d(0, 0, 0);
     float: none;
     height: 160px;
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
     background: #333;
     background: rgba(0,0,0,0.6);
@@ -131,15 +131,15 @@ transform : translate3d(0, 0, 0);
 #magic_animation_testbox #magic_animation_retrobox { width: 20%;
     height: 80px;
     left: auto;
-    top: 60px;
+    top: 110px;
     left: 40%;
     line-height: 80px;
     font-size: 1.8em;
 }
-#magic_animation_testbox #magic_animation_timing { width: 20%; height: 80px; left: auto; top: 60px; left: 40%; line-height: 80px; font-size: 1.8em; }
+#magic_animation_testbox #magic_animation_timing { width: 20%; height: 80px; left: auto; top: 110px; left: 40%; line-height: 80px; font-size: 1.8em; }
 
-#cssoptions { top: 160px; padding: 60px 4% 200px 4%; }
-#cssoptions { width: 100%; float: none; top: 100px; text-align: center; }
+#cssoptions { padding: 60px 4% 200px 4%; }
+#cssoptions { width: 100%; float: none; top: 150px; text-align: center; }
 
 
 }
