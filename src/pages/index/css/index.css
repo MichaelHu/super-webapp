@@ -1,0 +1,47 @@
+.index-list .item {
+    margin-top: 10px;
+    pointer: cursor;
+}
+
+.index-list .item > div {
+    overflow: hidden;
+    height: 100px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 10%, rgba(0, 100, 200, 0.3) 90%);
+}
+
+.index-list .item img {
+    float: left;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+.index-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.index-list .item .title ,
+.index-list .item .abs {
+    font: normal normal normal 18px/30px Arial;
+    text-align: right;
+}
+
+.index-list .item .title {
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.index-list .item .abs {
+    height: 60px;
+    overflow: hidden;
+    color: #f66;
+    font-size: 14px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+}
+

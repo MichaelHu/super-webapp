@@ -1,11 +1,25 @@
-<h1>Index Page</h1>
-<button 
-    type="button" 
-    id="myButton" 
-    data-loading-text="Loading..." 
-    class="btn 
-    btn-primary" 
-    autocomplete="off">
-      Loading state
-</button>
+<div class="index-list container">
+<ul class="row"></ul>
+</div>
+
+<script id="index_list_tpl" type="text/template">
+
+<% _.each(data, function(item, index) {%>
+
+    <li class="item col-xs-12 col-sm-6 col-md-4" data-url="<%= item.url %>">
+    <div>
+        <img src="<%= item.imgurl %>">
+        <div class="title">
+            <%= item.title %>
+        </div>
+        <div class="abs">
+            <%= item.abs %>
+        </div>
+    </div>
+</li>
+
+<% }); %>
+
+</script>
+
 

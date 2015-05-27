@@ -11,6 +11,7 @@
                 // config is no need to be modified 
                 './bower_components/require-css/css'
                 , './bower_components/requirejs-text/text'
+                , 'zepto'
             ]
         }
         , {
@@ -19,7 +20,7 @@
         }
         , {
             name: 'index_pageview'
-            , exclude: [ 'rocket-p' ]
+            , exclude: [ 'rocket-p', 'bootstrap' ]
         }
     ]
     , optimize: 'none'
