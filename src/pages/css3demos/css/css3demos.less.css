@@ -1,0 +1,183 @@
+html,
+body,
+.css3demos-view {
+  height: 100%;
+}
+.css3demos-view {
+  position: relative;
+  background: url("../img/bk.jpg") repeat 0 0;
+  background-size: 170.6px auto;
+}
+.css3demos-view .btn-next,
+.css3demos-view .btn-prev {
+  position: fixed;
+  z-index: 1000;
+}
+.css3demos-view .btn-prev {
+  left: 0;
+}
+.css3demos-view .btn-next {
+  right: 0;
+}
+/**
+ * Scene 1
+ */
+.css3demos-view.scene_1 .tingshuo-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/tingshuo.png") no-repeat center center;
+  background-size: 82% auto;
+}
+.css3demos-view.scene_1.scene_1_1 .tingshuo-layer {
+  display: none;
+}
+.css3demos-view.scene_1.scene_1_1.scene_1_2 .cadeng-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/cadeng.png") no-repeat center center;
+  background-size: 82% auto;
+}
+.css3demos-view.scene_1 .lamp-layer {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/lamp.png") no-repeat center center;
+  background-size: 80% auto;
+}
+/**
+ * Scene 2
+ */
+.css3demos-view.scene_2 .ray-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/ray.png") no-repeat center center;
+  background-size: 100% auto;
+}
+.css3demos-view.scene_2 .lamp-shine-layer {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/lamp-shine.png") no-repeat center center;
+  background-size: 80% auto;
+}
+/**
+ * Scene 3
+ */
+/***************************************
+ * mixins
+ */
+.css3demos-view.scene_3 .bomb {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.css3demos-view.scene_3 .bombing {
+  -webkit-animation-name: bomb;
+  animation-name: bomb;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+@-webkit-keyframes bomb {
+  0% {
+    background-image: url("../img/bomb-f1.png");
+  }
+  16% {
+    background-image: url("../img/bomb-f2.png");
+  }
+  32% {
+    background-image: url("../img/bomb-f3.png");
+  }
+  48% {
+    background-image: url("../img/bomb-f4.png");
+  }
+  64% {
+    background-image: url("../img/bomb-f5.png");
+  }
+  82% {
+    background-image: url("../img/bomb-f6.png");
+  }
+  100% {
+    background-image: none;
+  }
+}
+/**
+ * Scene 4
+ */
+.css3demos-view.scene_4 .ray-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/ray.png") no-repeat center center;
+  background-size: 100% auto;
+}
+.css3demos-view.scene_4 .lamp-shine-layer {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: url("../img/lamp-shine.png") no-repeat center bottom;
+  background-size: 50% auto;
+}
+.css3demos-view.scene_4.scene_4_1 .spirit-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: url("../img/spirit.png") no-repeat center center;
+  background-size: 96% auto;
+}
+.css3demos-view.scene_4.scene_4_1 .cloud-1-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background: url("../img/cloud-1.png") no-repeat 94% 70%;
+  background-size: 60% auto;
+}
+.css3demos-view.scene_4.scene_4_1 .cloud-2-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: url("../img/cloud-1.png") no-repeat 10% 50%;
+  background-size: 50% auto;
+}
+.css3demos-view.scene_4.scene_4_1 .cloud-3-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background: url("../img/cloud-2.png") no-repeat -18% 70%;
+  background-size: 52% auto;
+}
