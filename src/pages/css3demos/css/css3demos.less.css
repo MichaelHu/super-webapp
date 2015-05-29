@@ -19,83 +19,90 @@ body,
 .css3demos-view .btn-next {
   right: 0;
 }
-/**
- * Scene 1
+/**********************************
+ * z-index configure
  */
-.css3demos-view.scene_1 .tingshuo-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../img/tingshuo.png") no-repeat center center;
-  background-size: 82% auto;
-}
-.css3demos-view.scene_1.scene_1_1 .tingshuo-layer {
-  display: none;
-}
-.css3demos-view.scene_1.scene_1_1.scene_1_2 .cadeng-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../img/cadeng.png") no-repeat center center;
-  background-size: 82% auto;
-}
-.css3demos-view.scene_1 .lamp-layer {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../img/lamp.png") no-repeat center center;
-  background-size: 80% auto;
-}
-/**
- * Scene 2
- */
-.css3demos-view.scene_2 .ray-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../img/ray.png") no-repeat center center;
-  background-size: 100% auto;
-}
-.css3demos-view.scene_2 .lamp-shine-layer {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../img/lamp-shine.png") no-repeat center center;
-  background-size: 80% auto;
-}
-/**
- * Scene 3
- */
-/***************************************
+/**********************************
  * mixins
  */
-.css3demos-view.scene_3 .bomb {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  height: 450px;
-  background-size: 100% auto;
-  background-position: center center;
+.css3demos-view .ray-layer {
+  background-image: url("../img/ray.png");
   background-repeat: no-repeat;
 }
-.css3demos-view.scene_3 .bombing {
-  -webkit-animation-name: bomb;
-  animation-name: bomb;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
+.css3demos-view .lamp-layer {
+  background-image: url("../img/lamp.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .lamp-shine-layer {
+  background-image: url("../img/lamp-shine.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .tingshuo-layer {
+  background-image: url("../img/tingshuo.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .cadeng-layer {
+  background-image: url("../img/cadeng.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .spirit-layer {
+  background-image: url("../img/spirit.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .cloud-1-layer,
+.css3demos-view .cloud-2-layer {
+  background-image: url("../img/cloud-1.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .cloud-3-layer {
+  background-image: url("../img/cloud-2.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .coin-1-layer,
+.css3demos-view .coin-2-layer,
+.css3demos-view .coin-3-layer,
+.css3demos-view .coin-4-layer,
+.css3demos-view .coin-5-layer {
+  background-image: url("../img/coin.png");
+  background-repeat: no-repeat;
+}
+@-webkit-keyframes jello {
+  11.1% {
+    -webkit-transform: none;
+    transform: none;
+  }
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+  33.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  44.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  55.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  66.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+  77.7% {
+    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+  88.8% {
+    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 @-webkit-keyframes bomb {
   0% {
@@ -120,6 +127,298 @@ body,
     background-image: none;
   }
 }
+@-webkit-keyframes rotating {
+  0%,
+  50%,
+  100% {
+    -webkit-transform-origin: center;
+  }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(5px, 0, 0);
+  }
+}
+@-webkit-keyframes vanishOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(1, 1);
+    -webkit-filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(2, 2);
+    -webkit-filter: blur(20px);
+    display: none;
+  }
+}
+@-webkit-keyframes holeOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(1, 1) rotateY(0deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(0, 0) rotateY(180deg);
+  }
+}
+@-webkit-keyframes zoomoutToBottom {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform-origin: center;
+  }
+  0% {
+    -webkit-transform: translate(0, 0) scale(1, 1);
+  }
+  25% {
+    -webkit-transform: translate(15%, 15%) scale(0.9, 0.9);
+  }
+  50% {
+    -webkit-transform: translate(30%, 25%) scale(0.8, 0.8);
+  }
+  75% {
+    -webkit-transform: translate(-10%, 28%) scale(0.8, 0.7);
+  }
+  100% {
+    -webkit-transform: translate(0, 33%) scale(0.6, 0.6);
+  }
+}
+@-webkit-keyframes zoominFromBottom {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform-origin: center;
+  }
+  0% {
+    -webkit-transform: translate(-23%, 33%) scale(0.05, 0.05);
+  }
+  25% {
+    -webkit-transform: translate(25%, 25%) scale(0.25, 0.25);
+  }
+  50% {
+    -webkit-transform: translate(15%, 10%) scale(0.5, 0.5);
+  }
+  75% {
+    -webkit-transform: translate(-10%, 10%) scale(0.8, 0.8);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(1, 1);
+  }
+}
+@-webkit-keyframes shining {
+  50% {
+    -webkit-filter: drop-shadow(0 0 30px #ffffff);
+  }
+}
+/**
+ * Scene 1
+ */
+.css3demos-view.scene_1 .lamp-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 80px;
+  background: url("../img/lamp.png") no-repeat center center;
+  background-size: 80% auto;
+}
+.css3demos-view.scene_1.scene_1_1 .tingshuo-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center center;
+  background-size: 82% auto;
+}
+.css3demos-view.scene_1.scene_1_1 .tingshuo-layer.jello {
+  -webkit-animation-name: jello;
+  animation-name: jello;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.css3demos-view.scene_1.scene_1_1.scene_1_2 .tingshuo-layer.holeOut {
+  -webkit-animation-name: holeOut;
+  animation-name: holeOut;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_1.scene_1_1.scene_1_2 .ray-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/ray.png") no-repeat center center;
+  background-size: 100% auto;
+}
+.css3demos-view.scene_1.scene_1_1.scene_1_2 .ray-layer.rotating {
+  -webkit-animation-name: rotating;
+  animation-name: rotating;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.css3demos-view.scene_1.scene_1_1.scene_1_2 .lamp-layer.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+/**
+ * Scene 2
+ */
+.css3demos-view.scene_2 .bomb {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.css3demos-view.scene_2 .bombing {
+  -webkit-animation-name: bomb;
+  animation-name: bomb;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+/**
+ * Scene 3
+ */
+.css3demos-view.scene_3 .ray-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-size: 100% auto;
+  background-position: center center;
+}
+.css3demos-view.scene_3 .ray-layer.rotating {
+  -webkit-animation-name: rotating;
+  animation-name: rotating;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.css3demos-view.scene_3 .lamp-shine-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 8%;
+  bottom: auto;
+  height: 100%;
+  z-index: 5;
+  background-position: center center;
+  background-size: 80% auto;
+}
+.css3demos-view.scene_3.scene_3_1 .cadeng-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: -18%;
+  bottom: auto;
+  z-index: 10;
+  height: 100%;
+  background-position: center center;
+  background-size: 60% auto;
+}
+.css3demos-view.scene_3.scene_3_1 .cadeng-layer.jello {
+  -webkit-animation-name: jello;
+  animation-name: jello;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.css3demos-view.scene_3.scene_3_1.scene_3_2 .cadeng-layer.holeOut {
+  -webkit-animation-name: holeOut;
+  animation-name: holeOut;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_3.scene_3_1.scene_3_2 .lamp-shine-layer.shining {
+  -webkit-animation-name: shining;
+  animation-name: shining;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
 /**
  * Scene 4
  */
@@ -129,17 +428,48 @@ body,
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../img/ray.png") no-repeat center center;
+  z-index: 1;
   background-size: 100% auto;
+  background-position: center center;
+}
+.css3demos-view.scene_4 .ray-layer.rotating {
+  -webkit-animation-name: rotating;
+  animation-name: rotating;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 .css3demos-view.scene_4 .lamp-shine-layer {
   position: absolute;
-  top: -5%;
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  top: 8%;
+  bottom: auto;
   height: 100%;
-  background: url("../img/lamp-shine.png") no-repeat center bottom;
-  background-size: 50% auto;
+  z-index: 5;
+  background-size: 80% auto;
+  background-position: center center;
+  -webkit-filter: drop-shadow(0 0 18px #ffffff);
+}
+.css3demos-view.scene_4 .lamp-shine-layer.zoomoutToBottom {
+  -webkit-animation-name: zoomoutToBottom;
+  animation-name: zoomoutToBottom;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_4.scene_4_1 .lamp-shine-layer {
+  -webkit-filter: none;
 }
 .css3demos-view.scene_4.scene_4_1 .spirit-layer {
   position: absolute;
@@ -147,9 +477,21 @@ body,
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
-  background: url("../img/spirit.png") no-repeat center center;
-  background-size: 96% auto;
+  z-index: 20;
+  background-size: 80% auto;
+  background-position: 10% center;
+}
+.css3demos-view.scene_4.scene_4_1 .spirit-layer.zoominFromBottom {
+  -webkit-animation-name: zoominFromBottom;
+  animation-name: zoominFromBottom;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .css3demos-view.scene_4.scene_4_1 .cloud-1-layer {
   position: absolute;
@@ -157,9 +499,21 @@ body,
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 3;
-  background: url("../img/cloud-1.png") no-repeat 94% 70%;
+  z-index: 25;
+  background-position: 94% 70%;
   background-size: 60% auto;
+}
+.css3demos-view.scene_4.scene_4_1 .cloud-1-layer.zoominFromBottom {
+  -webkit-animation-name: zoominFromBottom;
+  animation-name: zoominFromBottom;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .css3demos-view.scene_4.scene_4_1 .cloud-2-layer {
   position: absolute;
@@ -167,9 +521,21 @@ body,
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
-  background: url("../img/cloud-1.png") no-repeat 10% 50%;
+  z-index: 10;
+  background-position: 10% 50%;
   background-size: 50% auto;
+}
+.css3demos-view.scene_4.scene_4_1 .cloud-2-layer.zoominFromBottom {
+  -webkit-animation-name: zoominFromBottom;
+  animation-name: zoominFromBottom;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .css3demos-view.scene_4.scene_4_1 .cloud-3-layer {
   position: absolute;
@@ -177,7 +543,115 @@ body,
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 3;
-  background: url("../img/cloud-2.png") no-repeat -18% 70%;
+  z-index: 25;
+  background-position: -18% 70%;
   background-size: 52% auto;
+}
+.css3demos-view.scene_4.scene_4_1 .cloud-3-layer.zoominFromBottom {
+  -webkit-animation-name: zoominFromBottom;
+  animation-name: zoominFromBottom;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2 {
+  /* mixins */
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2 .spirit-layer.shining {
+  -webkit-animation-name: shining;
+  animation-name: shining;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2 .cloud-1-layer.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2 .cloud-2-layer.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2 .cloud-3-layer.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2 .coin-1-layer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  z-index: 30;
+  background-size: 100% auto;
+  top: 36%;
+  left: 80%;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2 .coin-2-layer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  z-index: 30;
+  background-size: 100% auto;
+  top: 53%;
+  left: 32%;
+  -webkit-filter: blur(1px);
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2 .coin-3-layer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  z-index: 30;
+  background-size: 100% auto;
+  top: 71%;
+  left: 5%;
+  -webkit-filter: blur(1px);
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2 .coin-4-layer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  z-index: 30;
+  background-size: 100% auto;
+  top: 73%;
+  left: 48%;
+  -webkit-transform: scale(0.5, 0.5);
+  -webkit-filter: blur(1px);
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2 .coin-5-layer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  z-index: 30;
+  background-size: 100% auto;
+  top: 78%;
+  left: 70%;
+  -webkit-transform: scale(0.7, 0.7);
+  -webkit-filter: blur(1px);
 }

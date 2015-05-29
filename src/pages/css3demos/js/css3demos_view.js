@@ -17,7 +17,9 @@ var css3demosPageView = Rocket.PageView.extend({
     , init: function (options) {
         var me = this;
 
-        me.$el.html(html);          
+        me.$el
+            .css('padding-top', '0px')
+            .html(html);          
 
         me.sceneList = [
             'scene_1'
@@ -26,17 +28,38 @@ var css3demosPageView = Rocket.PageView.extend({
 
             , 'scene_2'
             , 'scene_3'
+            , 'scene_3_1'
+            , 'scene_3_2'
 
             , 'scene_4'
             , 'scene_4_1'
+            , 'scene_4_2'
         ];
 
-        me.currentScene = -1;
+        me.currentScene = 6;
         me.onbtnnextclick();
     }
 
     , className: 'css3demos-view'
 
+    , registerEvents: function () {
+        var me = this;
+
+        me.ec.on('pagebeforechange', me.onpagebeforechange, me);
+    }
+
+    , onpagebeforechange: function (params) {
+        var me = this,
+            from = params.from,
+            to = params.to;
+
+        if (from == me.ec) {
+            $('#main_nav').show();
+        }
+        else if (to == me.ec) {
+            $('#main_nav').hide();
+        }
+    }
     , getNextScene: function (current) {
         return this.getScene(true, current);
     }

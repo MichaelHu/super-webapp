@@ -1,0 +1,24 @@
+.rotating () {
+    .animation_name(rotating);
+    .animation_duration(2s);
+    .animation_timing_function(linear);
+    .animation_iteration_count(infinite);
+}
+
+@-webkit-keyframes rotating {
+    0%, 50%, 100% {
+        -webkit-transform-origin: center;
+    }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+

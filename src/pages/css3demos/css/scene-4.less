@@ -4,69 +4,156 @@
 .css3demos-view.scene_4 {
 
     .ray-layer {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("../img/ray.png") no-repeat center center;
+        .position-abs();
+        z-index: @ray_layer_zindex;
         background-size: 100% auto; 
+        background-position: center center;
+
+        &.rotating {
+            .rotating();
+        }
     }
 
     .lamp-shine-layer {
-        position: absolute;
-        top: -5%;
-        left: 0;
-        right: 0;
+        .position-abs();
+        top: 8%;
+        bottom: auto;
         height: 100%;
-        background: url("../img/lamp-shine.png") no-repeat center bottom;
-        background-size: 50% auto; 
+        z-index: @lamp_shine_layer_zindex;
+        background-size: 80% auto; 
+        background-position: center center;
+        -webkit-filter: drop-shadow(0 0 18px #fff);
+
+        &.zoomoutToBottom {
+            .zoomoutToBottom();     
+        }
+
     }
+
 
     &.scene_4_1 {
 
+        .lamp-shine-layer {
+            -webkit-filter: none;
+        }
+
         .spirit-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 2;
-            background: url("../img/spirit.png") no-repeat center center;
-            background-size: 96% auto; 
+            .position-abs();
+            z-index: @spirit_layer_zindex;
+            background-size: 80% auto; 
+            background-position: 10% center;
+
+            &.zoominFromBottom {
+                .zoominFromBottom();
+            }
         }
 
         .cloud-1-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 3;
-            background: url("../img/cloud-1.png") no-repeat 94% 70%;
+            .position-abs();
+            z-index: @cloud_1_layer_zindex;
+            background-position: 94% 70%;
             background-size: 60% auto; 
+
+            &.zoominFromBottom {
+                .zoominFromBottom();
+            }
         }
 
         .cloud-2-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
-            background: url("../img/cloud-1.png") no-repeat 10% 50%;
+            .position-abs();
+            z-index: @cloud_2_layer_zindex;
+            background-position: 10% 50%;
             background-size: 50% auto; 
+
+            &.zoominFromBottom {
+                .zoominFromBottom();
+            }
         }
 
         .cloud-3-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 3;
-            background: url("../img/cloud-2.png") no-repeat -18% 70%;
+            .position-abs();
+            z-index: @cloud_3_layer_zindex;
+            background-position: -18% 70%;
             background-size: 52% auto; 
+
+            &.zoominFromBottom {
+                .zoominFromBottom();
+            }
+        }
+
+
+        &.scene_4_2 {
+
+            .spirit-layer {
+                &.shining {
+                    .shining(2s; linear; infinite);
+                }
+            }
+
+            .cloud-1-layer {
+                &.shake {
+                    .shake(5s);
+                }
+            }
+
+            .cloud-2-layer {
+                &.shake {
+                    .shake(5s);
+                }
+            }
+
+            .cloud-3-layer {
+                &.shake {
+                    .shake(5s);
+                }
+            }
+
+
+            /* mixins */
+            .coin-layer () {
+                position: absolute;
+                width: 11%;
+                height: 11%;
+                z-index: @coin_1_layer_zindex;
+                background-size: 100% auto;
+            }
+
+            .coin-1-layer {
+                .coin-layer();
+                top: 36%;
+                left: 80%;
+            }
+
+            .coin-2-layer {
+                .coin-layer();
+                top: 53%;
+                left: 32%;
+                -webkit-filter: blur(1px);
+            }
+
+            .coin-3-layer {
+                .coin-layer();
+                top: 71%;
+                left: 5%;
+                -webkit-filter: blur(1px);
+            }
+
+            .coin-4-layer {
+                .coin-layer();
+                top: 73%;
+                left: 48%;
+                -webkit-transform: scale(.5, .5);
+                -webkit-filter: blur(1px);
+            }
+
+            .coin-5-layer {
+                .coin-layer();
+                top: 78%;
+                left: 70%;
+                -webkit-transform: scale(.7, .7);
+                -webkit-filter: blur(1px);
+            }
+
         }
 
     }

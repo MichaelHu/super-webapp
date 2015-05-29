@@ -22,8 +22,82 @@ html, body, .css3demos-view {
 }
 
 
+/**********************************
+ * z-index configure
+ */
+
+@bomb_layer_zindex: 30;
+@coin_1_layer_zindex: 30;
+
+@cloud_1_layer_zindex: 25;
+@cloud_3_layer_zindex: 25;
+
+@spirit_layer_zindex: 20;
+
+@cloud_2_layer_zindex: 10;
+@tingshuo_layer_zindex: 10;
+@cadeng_layer_zindex: 10;
+
+@lamp_layer_zindex: 5;
+@lamp_shine_layer_zindex: 5;
+
+@ray_layer_zindex: 1;
 
 
+/**********************************
+ * mixins
+ */
+
+.position-abs () {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.animation_name(@name) {
+    -webkit-animation-name: @name;
+    animation-name: @name;
+}
+
+.animation_duration(@duration) {
+    -webkit-animation-duration: @duration;
+    animation-duration: @duration;
+}
+
+.animation_timing_function(@func:linear) {
+    -webkit-animation-timing-function: @func;
+    animation-timing-function: @func;
+}
+
+.animation_iteration_count(@count:1) {
+    -webkit-animation-iteration-count: @count;
+    animation-iteration-count: @count;
+}
+
+.animation_fill_mode(@mode:none) {
+    -webkit-animation-fill-mode: @mode;
+    animation-fill-mode: @mode;
+}
+
+
+
+
+
+
+
+
+@import "background";
+@import "animation-jello";
+@import "animation-bombing";
+@import "animation-rotating";
+@import "animation-shake";
+@import "animation-vanishOut";
+@import "animation-holeOut";
+@import "animation-zoomoutToBottom";
+@import "animation-zoominFromBottom";
+@import "animation-shining";
 @import "scene-1";
 @import "scene-2";
 @import "scene-3";

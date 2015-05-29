@@ -1,48 +1,61 @@
 /**
  * Scene 1
  */
+
+
 .css3demos-view.scene_1 {
 
-    .tingshuo-layer {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("../img/tingshuo.png") no-repeat center center;
-        background-size: 82% auto; 
+    .lamp-layer {
+        .position-abs();
+        top: 80px;
+        background: url("../img/lamp.png") no-repeat center center;
+        background-size: 80% auto; 
     }
 
     &.scene_1_1 {
 
         .tingshuo-layer {
-            display: none;
-        }
+            .position-abs();
+            background-position: center center;
+            background-size: 82% auto; 
 
-        &.scene_1_2 {
-
-            .cadeng-layer {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: url("../img/cadeng.png") no-repeat center center;
-                background-size: 82% auto; 
+            &.jello {
+                .jello();
             }
 
         }
 
-    }
+        &.scene_1_2 {
 
-    .lamp-layer {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("../img/lamp.png") no-repeat center center;
-        background-size: 80% auto; 
+            .tingshuo-layer {
+
+                &.holeOut {
+                    .holeOut();
+                }
+            
+            }
+
+            .ray-layer {
+                .position-abs();
+                background: url("../img/ray.png") no-repeat center center;
+                background-size: 100% auto; 
+
+                &.rotating {
+                    .rotating();
+                }
+
+            }
+
+            .lamp-layer {
+
+                &.shake {
+                    .shake();
+                }
+
+            }
+
+        }
+
     }
 
 }

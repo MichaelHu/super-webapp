@@ -1,0 +1,33 @@
+.zoomoutToBottom () {
+    .animation_name(zoomoutToBottom);
+    .animation_duration(1s);
+    .animation_timing_function(linear);
+    .animation_iteration_count();
+    .animation_fill_mode(forwards); 
+}
+
+@-webkit-keyframes zoomoutToBottom {
+    0%, 25%, 50%, 75%, 100% {
+        -webkit-transform-origin: center;
+    }
+
+    0% {
+        -webkit-transform: translate(0, 0) scale(1, 1);
+    }
+
+    25% {
+        -webkit-transform: translate(15%, 15%) scale(.9, .9);
+    }
+
+    50% {
+        -webkit-transform: translate(30%, 25%) scale(.8, .8);
+    }
+
+    75% {
+        -webkit-transform: translate(-10%, 28%) scale(.8, .7);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 33%) scale(0.6, 0.6);
+    }
+}

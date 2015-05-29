@@ -1,0 +1,16 @@
+.shining (@duration:1s; @time_func:linear; @loop_count:1) {
+    .animation_name(shining);
+    .animation_duration(@duration);
+    .animation_timing_function(@time_func);
+    .animation_iteration_count(@loop_count);
+    .animation_fill_mode(forwards); 
+}
+
+@-webkit-keyframes shining {
+    0%, 100% {
+    }
+
+    50% {
+        -webkit-filter: drop-shadow(0 0 30px #fff);
+    }
+}

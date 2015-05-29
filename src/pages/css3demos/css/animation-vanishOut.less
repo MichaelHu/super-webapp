@@ -1,0 +1,26 @@
+.vanishOut () {
+    .animation_name(vanishOut);
+    .animation_duration(1s);
+    .animation_timing_function(ease-out);
+    .animation_iteration_count();
+    .animation_fill_mode(forwards); 
+}
+
+@-webkit-keyframes vanishOut {
+
+    0% {
+        opacity: 1;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: scale(1, 1);
+        -webkit-filter: blur(0px);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: scale(2, 2);
+        -webkit-filter: blur(20px);
+        display: none;
+    }
+
+}
