@@ -1,15 +1,22 @@
 html,
+body {
+  font-size: 20px;
+  line-height: 1.5;
+}
+html,
 body,
 .css3demos-view {
   height: 100%;
 }
 .css3demos-view {
+  overflow: hidden;
   position: relative;
   background: url("../img/bk.jpg") repeat 0 0;
   background-size: 170.6px auto;
 }
 .css3demos-view .btn-next,
 .css3demos-view .btn-prev {
+  display: none;
   position: fixed;
   z-index: 1000;
 }
@@ -19,12 +26,143 @@ body,
 .css3demos-view .btn-next {
   right: 0;
 }
+.css3demos-view .prerender-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -200%;
+}
+.css3demos-view .prerender-layer .bomb.bombing {
+  -webkit-animation-name: bomb;
+  animation-name: bomb;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+.css3demos-view .prerender-layer .coin-1.coin-1-godown {
+  -webkit-animation-name: coin-1-godown;
+  animation-name: coin-1-godown;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view .prerender-layer .coin-2.coin-2-godown {
+  -webkit-animation-name: coin-2-godown;
+  animation-name: coin-2-godown;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view .prerender-layer .coin-3.coin-3-godown {
+  -webkit-animation-name: coin-3-godown;
+  animation-name: coin-3-godown;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view .prerender-layer .coin-4.coin-4-godown {
+  -webkit-animation-name: coin-4-godown;
+  animation-name: coin-4-godown;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view .prerender-layer .coin-5.coin-5-godown {
+  -webkit-animation-name: coin-5-godown;
+  animation-name: coin-5-godown;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view .input-layer,
+.css3demos-view .tip-layer,
+.css3demos-view .congratulation-layer,
+.css3demos-view .result-layer {
+  display: none;
+}
+.css3demos-view .logo-layer {
+  position: absolute;
+  width: 90px;
+  height: 26px;
+  top: 2px;
+  left: 5px;
+  z-index: 2;
+  background-position: center center;
+  background-size: 100% auto;
+}
+.css3demos-view .loading-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  background-position: center center;
+  background-size: 30% auto;
+  background-color: #f5bf71;
+}
+.css3demos-view .loading-layer .info {
+  position: absolute;
+  height: 1rem;
+  top: 54%;
+  left: 0;
+  right: 0;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #ff7404;
+  text-align: center;
+}
+.css3demos-view .design-layer {
+  position: absolute;
+  width: 70px;
+  height: 16px;
+  right: 5px;
+  bottom: 2px;
+  z-index: 2;
+  background-position: center center;
+  background-size: 100% auto;
+}
 /**********************************
  * z-index configure
  */
 /**********************************
  * mixins
  */
+.css3demos-view .loading-layer,
+.css3demos-view .logo-layer {
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .design-layer {
+  background-image: url("../img/design.png");
+  background-repeat: no-repeat;
+}
 .css3demos-view .ray-layer {
   background-image: url("../img/ray.png");
   background-repeat: no-repeat;
@@ -49,6 +187,10 @@ body,
   background-image: url("../img/spirit.png");
   background-repeat: no-repeat;
 }
+.css3demos-view .spirit-shout-layer {
+  background-image: url("../img/spirit-shout.png");
+  background-repeat: no-repeat;
+}
 .css3demos-view .cloud-1-layer,
 .css3demos-view .cloud-2-layer {
   background-image: url("../img/cloud-1.png");
@@ -64,6 +206,18 @@ body,
 .css3demos-view .coin-4-layer,
 .css3demos-view .coin-5-layer {
   background-image: url("../img/coin.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .goto-work-layer {
+  background-image: url("../img/goto-work.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .goto-work-2-layer {
+  background-image: url("../img/goto-work-2.png");
+  background-repeat: no-repeat;
+}
+.css3demos-view .spirit-in-car-layer {
+  background-image: url("../img/spirit-in-car.png");
   background-repeat: no-repeat;
 }
 @-webkit-keyframes jello {
@@ -106,22 +260,22 @@ body,
 }
 @-webkit-keyframes bomb {
   0% {
-    background-image: url("../img/bomb-f1.png");
+    background-image: url("/src/pages/css3demos/img/bomb-f1.png");
   }
   16% {
-    background-image: url("../img/bomb-f2.png");
+    background-image: url("/src/pages/css3demos/img/bomb-f2.png");
   }
   32% {
-    background-image: url("../img/bomb-f3.png");
+    background-image: url("/src/pages/css3demos/img/bomb-f3.png");
   }
   48% {
-    background-image: url("../img/bomb-f4.png");
+    background-image: url("/src/pages/css3demos/img/bomb-f4.png");
   }
   64% {
-    background-image: url("../img/bomb-f5.png");
+    background-image: url("/src/pages/css3demos/img/bomb-f5.png");
   }
   82% {
-    background-image: url("../img/bomb-f6.png");
+    background-image: url("/src/pages/css3demos/img/bomb-f6.png");
   }
   100% {
     background-image: none;
@@ -213,6 +367,30 @@ body,
     -webkit-transform: translate(0, 33%) scale(0.6, 0.6);
   }
 }
+@-webkit-keyframes disappearToBottom {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform-origin: center;
+  }
+  0% {
+    -webkit-transform: translate(0, 0) scale(1, 1);
+  }
+  25% {
+    -webkit-transform: translate(-10%, 10%) scale(0.8, 0.8);
+  }
+  50% {
+    -webkit-transform: translate(15%, 10%) scale(0.5, 0.5);
+  }
+  75% {
+    -webkit-transform: translate(25%, 25%) scale(0.25, 0.25);
+  }
+  100% {
+    -webkit-transform: translate(-23%, 33%) scale(0, 0);
+  }
+}
 @-webkit-keyframes zoominFromBottom {
   0%,
   25%,
@@ -237,9 +415,156 @@ body,
     -webkit-transform: translate(0, 0) scale(1, 1);
   }
 }
+@-webkit-keyframes zoominDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
 @-webkit-keyframes shining {
   50% {
     -webkit-filter: drop-shadow(0 0 30px #ffffff);
+  }
+}
+@-webkit-keyframes bounceInDown {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes bounceInRight {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes bounceInUp {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes coin-1-godown {
+  100% {
+    top: 47%;
+    left: 80%;
+    background-image: url("../img/coin-fri.png");
+  }
+}
+@-webkit-keyframes coin-2-godown {
+  100% {
+    top: 40%;
+    left: 65%;
+    background-image: url("../img/coin-thu.png");
+  }
+}
+@-webkit-keyframes coin-3-godown {
+  100% {
+    top: 35%;
+    left: 46%;
+    background-image: url("../img/coin-wed.png");
+  }
+}
+@-webkit-keyframes coin-4-godown {
+  100% {
+    top: 40%;
+    left: 25%;
+    background-image: url("../img/coin-tue.png");
+  }
+}
+@-webkit-keyframes coin-5-godown {
+  100% {
+    top: 47%;
+    left: 9%;
+    background-image: url("../img/coin-mon.png");
   }
 }
 /**
@@ -294,16 +619,11 @@ body,
   bottom: 0;
   background: url("../img/ray.png") no-repeat center center;
   background-size: 100% auto;
-}
-.css3demos-view.scene_1.scene_1_1.scene_1_2 .ray-layer.rotating {
-  -webkit-animation-name: rotating;
-  animation-name: rotating;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+  /*
+                &.rotating {
+                    .rotating();
+                }
+                */
 }
 .css3demos-view.scene_1.scene_1_1.scene_1_2 .lamp-layer.shake {
   -webkit-animation-name: shake;
@@ -348,16 +668,11 @@ body,
   z-index: 1;
   background-size: 100% auto;
   background-position: center center;
-}
-.css3demos-view.scene_3 .ray-layer.rotating {
-  -webkit-animation-name: rotating;
-  animation-name: rotating;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+  /*
+        &.rotating {
+            .rotating();
+        }
+        */
 }
 .css3demos-view.scene_3 .lamp-shine-layer {
   position: absolute;
@@ -431,16 +746,11 @@ body,
   z-index: 1;
   background-size: 100% auto;
   background-position: center center;
-}
-.css3demos-view.scene_4 .ray-layer.rotating {
-  -webkit-animation-name: rotating;
-  animation-name: rotating;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+  /*
+        &.rotating {
+            .rotating();
+        }
+        */
 }
 .css3demos-view.scene_4 .lamp-shine-layer {
   position: absolute;
@@ -559,9 +869,6 @@ body,
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-.css3demos-view.scene_4.scene_4_1.scene_4_2 {
-  /* mixins */
-}
 .css3demos-view.scene_4.scene_4_1.scene_4_2 .spirit-layer.shining {
   -webkit-animation-name: shining;
   animation-name: shining;
@@ -604,7 +911,10 @@ body,
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-.css3demos-view.scene_4.scene_4_1.scene_4_2 .coin-1-layer {
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 {
+  /* mixins */
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 .coin-1-layer {
   position: absolute;
   width: 11%;
   height: 11%;
@@ -613,7 +923,15 @@ body,
   top: 36%;
   left: 80%;
 }
-.css3demos-view.scene_4.scene_4_1.scene_4_2 .coin-2-layer {
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 .coin-1-layer.zoominDown {
+  -webkit-animation-name: zoominDown;
+  animation-name: zoominDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 .coin-2-layer {
   position: absolute;
   width: 11%;
   height: 11%;
@@ -623,7 +941,15 @@ body,
   left: 32%;
   -webkit-filter: blur(1px);
 }
-.css3demos-view.scene_4.scene_4_1.scene_4_2 .coin-3-layer {
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 .coin-2-layer.zoominDown {
+  -webkit-animation-name: zoominDown;
+  animation-name: zoominDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 .coin-3-layer {
   position: absolute;
   width: 11%;
   height: 11%;
@@ -633,7 +959,15 @@ body,
   left: 5%;
   -webkit-filter: blur(1px);
 }
-.css3demos-view.scene_4.scene_4_1.scene_4_2 .coin-4-layer {
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 .coin-3-layer.zoominDown {
+  -webkit-animation-name: zoominDown;
+  animation-name: zoominDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 .coin-4-layer {
   position: absolute;
   width: 11%;
   height: 11%;
@@ -644,7 +978,15 @@ body,
   -webkit-transform: scale(0.5, 0.5);
   -webkit-filter: blur(1px);
 }
-.css3demos-view.scene_4.scene_4_1.scene_4_2 .coin-5-layer {
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 .coin-4-layer.zoominDown {
+  -webkit-animation-name: zoominDown;
+  animation-name: zoominDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 .coin-5-layer {
   position: absolute;
   width: 11%;
   height: 11%;
@@ -654,4 +996,462 @@ body,
   left: 70%;
   -webkit-transform: scale(0.7, 0.7);
   -webkit-filter: blur(1px);
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3 .coin-5-layer.zoominDown {
+  -webkit-animation-name: zoominDown;
+  animation-name: zoominDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3.scene_4_4 .coin-1-layer {
+  top: 27%;
+  left: 80%;
+  -webkit-filter: none;
+  -webkit-transform: none;
+  -webkit-transition: top, left 1s, 1s ease-out, ease-out 0.5s, 0.5s;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3.scene_4_4 .coin-2-layer {
+  top: 20%;
+  left: 65%;
+  -webkit-filter: none;
+  -webkit-transform: none;
+  -webkit-transition: top, left 1s, 1s ease-out, ease-out 0.5s, 0.5s;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3.scene_4_4 .coin-3-layer {
+  top: 15%;
+  left: 46%;
+  -webkit-filter: none;
+  -webkit-transform: none;
+  -webkit-transition: top, left 1s, 1s ease-out, ease-out 0.5s, 0.5s;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3.scene_4_4 .coin-4-layer {
+  top: 20%;
+  left: 25%;
+  -webkit-filter: none;
+  -webkit-transform: none;
+  -webkit-transition: top, left 1s, 1s ease-out, ease-out 0.5s, 0.5s;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3.scene_4_4 .coin-5-layer {
+  top: 27%;
+  left: 9%;
+  -webkit-filter: none;
+  -webkit-transform: none;
+  -webkit-transition: top, left 1s, 1s ease-out, ease-out 0.5s, 0.5s;
+}
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3.scene_4_4 .spirit-layer.disappearToBottom,
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3.scene_4_4 .cloud-1-layer.disappearToBottom,
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3.scene_4_4 .cloud-2-layer.disappearToBottom,
+.css3demos-view.scene_4.scene_4_1.scene_4_2.scene_4_3.scene_4_4 .cloud-3-layer.disappearToBottom {
+  -webkit-animation-name: disappearToBottom;
+  animation-name: disappearToBottom;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/**
+ * Scene 5
+ */
+.css3demos-view.scene_5 {
+  /* mixins */
+}
+.css3demos-view.scene_5 .ray-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-size: 100% auto;
+  background-position: center center;
+  /*
+        &.rotating {
+            .rotating();
+        }
+        */
+}
+.css3demos-view.scene_5 .lamp-shine-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 8%;
+  bottom: auto;
+  height: 100%;
+  z-index: 5;
+  background-size: 80% auto;
+  background-position: center center;
+  -webkit-transform: translate(0, 33%) scale(0.6, 0.6);
+}
+.css3demos-view.scene_5 .coin-1-layer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  z-index: 30;
+  background-size: 100% auto;
+  top: 27%;
+  left: 80%;
+}
+.css3demos-view.scene_5 .coin-2-layer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  z-index: 30;
+  background-size: 100% auto;
+  top: 20%;
+  left: 65%;
+}
+.css3demos-view.scene_5 .coin-3-layer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  z-index: 30;
+  background-size: 100% auto;
+  top: 15%;
+  left: 46%;
+}
+.css3demos-view.scene_5 .coin-4-layer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  z-index: 30;
+  background-size: 100% auto;
+  top: 20%;
+  left: 25%;
+}
+.css3demos-view.scene_5 .coin-5-layer {
+  position: absolute;
+  width: 11%;
+  height: 11%;
+  z-index: 30;
+  background-size: 100% auto;
+  top: 27%;
+  left: 9%;
+}
+.css3demos-view.scene_5.scene_5_1 {
+  /* mixin */
+}
+.css3demos-view.scene_5.scene_5_1 .goto-work-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  top: 10%;
+  bottom: auto;
+  z-index: 5;
+  background-position: center top;
+  background-size: 75% auto;
+}
+.css3demos-view.scene_5.scene_5_1 .goto-work-layer.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.css3demos-view.scene_5.scene_5_1 .coin-1-layer.goDown {
+  -webkit-animation-name: coin-1-godown;
+  animation-name: coin-1-godown;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_5.scene_5_1 .coin-2-layer.goDown {
+  -webkit-animation-name: coin-2-godown;
+  animation-name: coin-2-godown;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_5.scene_5_1 .coin-3-layer.goDown {
+  -webkit-animation-name: coin-3-godown;
+  animation-name: coin-3-godown;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_5.scene_5_1 .coin-4-layer.goDown {
+  -webkit-animation-name: coin-4-godown;
+  animation-name: coin-4-godown;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_5.scene_5_1 .coin-5-layer.goDown {
+  -webkit-animation-name: coin-5-godown;
+  animation-name: coin-5-godown;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_5.scene_5_1 .lamp-shine-layer.disappearToBottom {
+  -webkit-transform: translate(0, 100%) scale(0.6, 0.6);
+  -webkit-transition: -webkit-transform 1s ease-in 0s;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .spirit-shout-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  bottom: auto;
+  top: 9%;
+  height: 100%;
+  z-index: 20;
+  background-position: center center;
+  background-size: 40% auto;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .cloud-1-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 25;
+  bottom: auto;
+  height: 100%;
+  top: -8%;
+  background-position: 92% 70%;
+  background-size: 47% auto;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .cloud-2-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  bottom: auto;
+  height: 100%;
+  top: 15%;
+  z-index: 25;
+  background-position: 18% 50%;
+  background-size: 39% auto;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .input-layer {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  bottom: 40px;
+  left: 15%;
+  right: 15%;
+  z-index: 35;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .input-layer .phone,
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .input-layer .btn-get {
+  width: 100%;
+  padding: .5rem .7rem;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  font-size: .7rem;
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .input-layer .phone {
+  -webkit-appearance: none;
+  outline-style: none;
+  color: #000;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .input-layer .phone.error {
+  border-color: red;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .input-layer .btn-get {
+  margin-top: .4rem;
+  background-color: #ff7404;
+  color: #fff;
+  border-color: #ff7404;
+  text-align: center;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .tip-layer,
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .congratulation-layer {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .congratulation-layer {
+  top: 29%;
+  z-index: 35;
+  height: 1.4rem;
+  line-height: .7rem;
+  font-size: .7rem;
+  text-align: center;
+  color: #5d2608;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .congratulation-layer.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .tip-layer {
+  top: auto;
+  bottom: 20px;
+  z-index: 34;
+  height: .6rem;
+  line-height: .6rem;
+  font-size: .6rem;
+  text-align: center;
+  color: #1e1e1e;
+}
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .spirit-shout-layer.bounceInUp,
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .cloud-1-layer.bounceInUp,
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .cloud-2-layer.bounceInUp,
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .input-layer.bounceInUp,
+.css3demos-view.scene_5.scene_5_1.scene_5_2 .tip-layer.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+/**
+ * Scene 6
+ */
+.css3demos-view.scene_6 .goto-work-2-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  top: 10%;
+  bottom: auto;
+  z-index: 5;
+  background-position: center top;
+  background-size: 75% auto;
+}
+.css3demos-view.scene_6 .goto-work-2-layer.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_6 .spirit-in-car-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  top: 31%;
+  bottom: auto;
+  z-index: 4;
+  background-position: center top;
+  background-size: 79% auto;
+}
+.css3demos-view.scene_6 .spirit-in-car-layer.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css3demos-view.scene_6 .result-layer {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  bottom: 1.5rem;
+  left: 15%;
+  right: 15%;
+  z-index: 35;
+  text-align: center;
+}
+.css3demos-view.scene_6 .result-layer .tip {
+  font-size: .6rem;
+  line-height: .8rem;
+  color: #666;
+}
+.css3demos-view.scene_6 .result-layer .tip span {
+  color: #63290a;
+}
+.css3demos-view.scene_6 .result-layer .download {
+  font-size: .7rem;
+  line-height: .9rem;
+  color: #6a6a6a;
+}
+.css3demos-view.scene_6 .result-layer .btn-share {
+  width: 100%;
+  padding: .5rem .7rem;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  font-size: .7rem;
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+  margin-top: .7rem;
+  background-color: #ff7404;
+  color: #fff;
+  border-color: #ff7404;
+}
+.css3demos-view.scene_6 .result-layer a {
+  text-decoration: underline;
+  color: #63290a;
+}
+.css3demos-view.scene_6 .result-layer.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }

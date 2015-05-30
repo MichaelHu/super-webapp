@@ -1,0 +1,255 @@
+/**
+ * Scene 5
+ */
+.css3demos-view.scene_5 {
+
+    .ray-layer {
+        .position-abs();
+        z-index: @ray_layer_zindex;
+        background-size: 100% auto; 
+        background-position: center center;
+
+        /*
+        &.rotating {
+            .rotating();
+        }
+        */
+    }
+
+    .lamp-shine-layer {
+        .position-abs();
+        top: 8%;
+        bottom: auto;
+        height: 100%;
+        z-index: @lamp_shine_layer_zindex;
+        background-size: 80% auto; 
+        background-position: center center;
+        -webkit-transform: translate(0, 33%) scale(0.6, 0.6);
+    }
+
+
+    /* mixins */
+    .coin-layer () {
+        position: absolute;
+        width: 11%;
+        height: 11%;
+        z-index: @coin_1_layer_zindex;
+        background-size: 100% auto;
+    }
+
+    .coin-1-layer {
+        .coin-layer();
+        top: 27%;
+        left: 80%;
+    }
+
+    .coin-2-layer {
+        .coin-layer();
+        top: 20%;
+        left: 65%;
+    }
+
+    .coin-3-layer {
+        .coin-layer();
+        top: 15%;
+        left: 46%;
+    }
+
+    .coin-4-layer {
+        .coin-layer();
+        top: 20%;
+        left: 25%;
+    }
+
+    .coin-5-layer {
+        .coin-layer();
+        top: 27%;
+        left: 9%;
+    }
+
+    
+    &.scene_5_1 {
+
+        .goto-work-layer {
+            .position-abs();
+            height: 100%;
+            top: 10%;
+            bottom: auto;
+            z-index: @goto_work_layer_zindex;
+            background-position: center top;
+            background-size: 75% auto; 
+        
+            &.bounceInDown {
+                .bounceInDown();
+            }
+        }
+
+        /* mixin */
+        .time_func () {
+            /* bad performance */
+            -webkit-transition: top,left 1s,1s cubic-bezier(0.215, 0.610, 0.355, 1.000),cubic-bezier(0.215, 0.610, 0.355, 1.000) 0s,0s;
+        }
+
+        .coin-1-layer {
+            &.goDown {
+                .coinGoDown(coin-1-godown);
+            }
+        }
+
+        .coin-2-layer {
+            &.goDown {
+                .coinGoDown(coin-2-godown);
+            }
+        }
+
+        .coin-3-layer {
+            &.goDown {
+                .coinGoDown(coin-3-godown);
+            }
+        }
+
+        .coin-4-layer {
+            &.goDown {
+                .coinGoDown(coin-4-godown);
+            }
+        }
+
+        .coin-5-layer {
+            &.goDown {
+                .coinGoDown(coin-5-godown);
+            }
+        }
+
+        .lamp-shine-layer {
+            &.disappearToBottom {
+                -webkit-transform: translate(0, 100%) scale(0.6, 0.6);
+                -webkit-transition: -webkit-transform 1s ease-in 0s;
+            }
+        }
+
+
+        &.scene_5_2 {
+
+            .spirit-shout-layer {
+                .position-abs();
+                bottom: auto;
+                top: 9%;
+                height: 100%;
+                z-index: @spirit_shout_layer_zindex;
+                background-position: center center;
+                background-size: 40% auto;
+            }
+
+            .cloud-1-layer {
+                .position-abs();
+                z-index: @cloud_1_layer_zindex;
+                bottom: auto;
+                height: 100%;
+                top: -8%;
+                background-position: 92% 70%;
+                background-size: 47% auto; 
+            }
+
+            .cloud-2-layer {
+                .position-abs();
+                bottom: auto;
+                height: 100%;
+                top: 15%;
+                z-index: @cloud_1_layer_zindex;
+                background-position: 18% 50%;
+                background-size: 39% auto; 
+            }
+
+            .input-layer {
+                display: block;
+                .position-abs();
+                top: auto;
+                bottom: 40px;
+                left: 15%;
+                right: 15%;
+                z-index: @input_layer_zindex;
+                
+                .phone ,
+                .btn-get {
+                    width: 100%;
+                    padding: .5rem .7rem;
+                    border-radius: 3px;
+                    border: 1px solid #fff;
+                    font-size: .7rem;
+                    line-height: 1;
+                    -webkit-box-sizing: border-box;
+                }
+
+                .phone {
+                    -webkit-appearance: none;
+                    outline-style: none;
+                    color: #000;
+                    
+                    &.error {
+                        border-color: red;
+                    }
+                }
+
+                .btn-get {
+                    margin-top: .4rem;
+                    background-color: #ff7404; 
+                    color: #fff;
+                    border-color: #ff7404;
+                    text-align: center;
+                }
+
+            }
+
+           
+            .tip-layer ,
+            .congratulation-layer {
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+            }
+
+            .congratulation-layer {
+                top: 29%;
+                z-index: @congratulation_layer_zindex;
+                height: 1.4rem;
+                line-height: .7rem;
+                font-size: .7rem;
+                text-align: center;
+                color: #5d2608;
+
+                &.bounceInRight {
+                    .bounceInRight();
+                }
+            } 
+
+            .tip-layer {
+                top: auto;
+                bottom: 20px;
+                z-index: @tip_layer_zindex;
+                height: .6rem;
+                line-height: .6rem;
+                font-size: .6rem;
+                text-align: center;
+                color: #1e1e1e;
+            }
+
+            
+            .spirit-shout-layer,
+            .cloud-1-layer,
+            .cloud-2-layer,
+            .input-layer,
+            .tip-layer {
+                &.bounceInUp {
+                    .bounceInUp();
+                }
+            }
+            
+
+        }
+
+
+    }
+
+
+}

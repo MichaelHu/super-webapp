@@ -1,0 +1,85 @@
+/**
+ * Scene 6
+ */
+.css3demos-view.scene_6 {
+
+    .goto-work-2-layer {
+        .position-abs();
+        height: 100%;
+        top: 10%;
+        bottom: auto;
+        z-index: @goto_work_2_layer_zindex;
+        background-position: center top;
+        background-size: 75% auto; 
+    
+        &.bounceInRight {
+            .bounceInRight();
+        }
+    }
+
+    .spirit-in-car-layer {
+        .position-abs();
+        height: 100%;
+        top: 31%;
+        bottom: auto;
+        z-index: @spirit_in_car_layer_zindex;
+        background-position: center top;
+        background-size: 79% auto; 
+    
+        &.bounceInRight {
+            .bounceInRight();
+        }
+    }
+
+    .result-layer {
+        display: block;
+        .position-abs();
+        top: auto;
+        bottom: 1.5rem;
+        left: 15%;
+        right: 15%;
+        z-index: @result_layer_zindex;
+        text-align: center;
+
+        .tip {
+            font-size: .6rem;
+            line-height: .8rem;
+            color: #666;
+
+            span {
+                color: #63290a;
+            }
+        }
+
+        .download {
+            font-size: .7rem;
+            line-height: .9rem;
+            color: #6a6a6a;
+        }
+
+        .btn-share {
+            width: 100%;
+            padding: .5rem .7rem;
+            border-radius: 3px;
+            border: 1px solid #fff;
+            font-size: .7rem;
+            line-height: 1;
+            -webkit-box-sizing: border-box;
+            margin-top: .7rem;
+            background-color: #ff7404; 
+            color: #fff;
+            border-color: #ff7404;
+        }
+
+        a {
+            text-decoration: underline;
+            color: #63290a;
+        }
+
+        &.bounceInRight {
+            .bounceInRight();
+        }
+
+    }
+
+}

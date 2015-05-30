@@ -9,9 +9,11 @@
         background-size: 100% auto; 
         background-position: center center;
 
+        /*
         &.rotating {
             .rotating();
         }
+        */
     }
 
     .lamp-shine-layer {
@@ -109,52 +111,136 @@
             }
 
 
-            /* mixins */
-            .coin-layer () {
-                position: absolute;
-                width: 11%;
-                height: 11%;
-                z-index: @coin_1_layer_zindex;
-                background-size: 100% auto;
+
+            &.scene_4_3 {
+
+                /* mixins */
+                .coin-layer () {
+                    position: absolute;
+                    width: 11%;
+                    height: 11%;
+                    z-index: @coin_1_layer_zindex;
+                    background-size: 100% auto;
+                }
+
+                .coin-1-layer {
+                    .coin-layer();
+                    top: 36%;
+                    left: 80%;
+
+                    &.zoominDown {
+                        .zoominDown();
+                    }
+                }
+
+                .coin-2-layer {
+                    .coin-layer();
+                    top: 53%;
+                    left: 32%;
+                    -webkit-filter: blur(1px);
+
+                    &.zoominDown {
+                        .zoominDown();
+                    }
+                }
+
+                .coin-3-layer {
+                    .coin-layer();
+                    top: 71%;
+                    left: 5%;
+                    -webkit-filter: blur(1px);
+
+                    &.zoominDown {
+                        .zoominDown();
+                    }
+                }
+
+                .coin-4-layer {
+                    .coin-layer();
+                    top: 73%;
+                    left: 48%;
+                    -webkit-transform: scale(.5, .5);
+                    -webkit-filter: blur(1px);
+
+                    &.zoominDown {
+                        .zoominDown();
+                    }
+                }
+
+                .coin-5-layer {
+                    .coin-layer();
+                    top: 78%;
+                    left: 70%;
+                    -webkit-transform: scale(.7, .7);
+                    -webkit-filter: blur(1px);
+
+                    &.zoominDown {
+                        .zoominDown();
+                    }
+                }
+
+
+                &.scene_4_4 {
+
+                    
+                    .coin-1-layer {
+                        top: 27%;
+                        left: 80%;
+                        -webkit-filter: none;
+                        -webkit-transform: none;
+                        -webkit-transition: top,left 1s,1s ease-out,ease-out .5s,.5s;
+                    }
+
+                    .coin-2-layer {
+                        top: 20%;
+                        left: 65%;
+                        -webkit-filter: none;
+                        -webkit-transform: none;
+                        -webkit-transition: top,left 1s,1s ease-out,ease-out .5s,.5s;
+                    }
+
+                    .coin-3-layer {
+                        top: 15%;
+                        left: 46%;
+                        -webkit-filter: none;
+                        -webkit-transform: none;
+                        -webkit-transition: top,left 1s,1s ease-out,ease-out .5s,.5s;
+                    }
+
+                    .coin-4-layer {
+                        top: 20%;
+                        left: 25%;
+                        -webkit-filter: none;
+                        -webkit-transform: none;
+                        -webkit-transition: top,left 1s,1s ease-out,ease-out .5s,.5s;
+                    }
+
+                    .coin-5-layer {
+                        top: 27%;
+                        left: 9%;
+                        -webkit-filter: none;
+                        -webkit-transform: none;
+                        -webkit-transition: top,left 1s,1s ease-out,ease-out .5s,.5s;
+                    }
+
+                    .spirit-layer ,
+                    .cloud-1-layer ,
+                    .cloud-2-layer ,
+                    .cloud-3-layer {
+                        &.disappearToBottom {
+                            .zoomoutToBottom(disappearToBottom);
+                        }
+                    }
+
+                }
+
             }
 
-            .coin-1-layer {
-                .coin-layer();
-                top: 36%;
-                left: 80%;
-            }
 
-            .coin-2-layer {
-                .coin-layer();
-                top: 53%;
-                left: 32%;
-                -webkit-filter: blur(1px);
-            }
-
-            .coin-3-layer {
-                .coin-layer();
-                top: 71%;
-                left: 5%;
-                -webkit-filter: blur(1px);
-            }
-
-            .coin-4-layer {
-                .coin-layer();
-                top: 73%;
-                left: 48%;
-                -webkit-transform: scale(.5, .5);
-                -webkit-filter: blur(1px);
-            }
-
-            .coin-5-layer {
-                .coin-layer();
-                top: 78%;
-                left: 70%;
-                -webkit-transform: scale(.7, .7);
-                -webkit-filter: blur(1px);
-            }
 
         }
+
+
 
     }
 

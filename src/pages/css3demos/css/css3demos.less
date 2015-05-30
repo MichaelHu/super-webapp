@@ -1,13 +1,20 @@
+html, body {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
 html, body, .css3demos-view { 
     height: 100%;
 }
 
 .css3demos-view {
+    overflow: hidden;
     position: relative;
     background: url("../img/bk.jpg") repeat 0 0;
     background-size: 170.6px auto;
 
     .btn-next, .btn-prev {
+        display: none;
         position: fixed;
         z-index: 1000;
     }
@@ -19,12 +26,101 @@ html, body, .css3demos-view {
     .btn-next {
         right: 0;
     }
+
+    .prerender-layer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -200%;
+
+        .bomb.bombing {
+            .bombing();
+        }
+
+        .coin-1.coin-1-godown {
+            .coinGoDown(coin-1-godown);
+        }
+
+        .coin-2.coin-2-godown {
+            .coinGoDown(coin-2-godown);
+        }
+
+        .coin-3.coin-3-godown {
+            .coinGoDown(coin-3-godown);
+        }
+
+        .coin-4.coin-4-godown {
+            .coinGoDown(coin-4-godown);
+        }
+
+        .coin-5.coin-5-godown {
+            .coinGoDown(coin-5-godown);
+        }
+
+    }
+
+    .input-layer ,
+    .tip-layer ,
+    .congratulation-layer ,
+    .result-layer {
+        display: none;
+    }
+
+    .logo-layer {
+        position: absolute;
+        width: 90px;
+        height: 26px;
+        top: 2px;
+        left: 5px;
+        z-index: @logo_layer_zindex;
+        background-position: center center;
+        background-size: 100% auto;
+    }
+
+    .loading-layer {
+        .position-abs();
+        z-index: @loading_layer_zindex;
+        background-position: center center;
+        background-size: 30% auto;
+        background-color: #f5bf71;
+
+        .info {
+            position: absolute;
+            height: 1rem;
+            top: 54%;
+            left: 0;
+            right: 0;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            color: #ff7404;
+            text-align: center;
+        }
+    }
+
+    .design-layer {
+        position: absolute;
+        width: 70px;
+        height: 16px;
+        right: 5px;
+        bottom: 2px;
+        z-index: @design_layer_zindex;
+        background-position: center center;
+        background-size: 100% auto;
+    }
+
 }
 
 
 /**********************************
  * z-index configure
  */
+
+@loading_layer_zindex: 40;
+
+@input_layer_zindex: 35;
+@result_layer_zindex: 35;
+@congratulation_layer_zindex: 35;
+@tip_layer_zindex: 34;
 
 @bomb_layer_zindex: 30;
 @coin_1_layer_zindex: 30;
@@ -33,6 +129,7 @@ html, body, .css3demos-view {
 @cloud_3_layer_zindex: 25;
 
 @spirit_layer_zindex: 20;
+@spirit_shout_layer_zindex: 20;
 
 @cloud_2_layer_zindex: 10;
 @tingshuo_layer_zindex: 10;
@@ -40,6 +137,12 @@ html, body, .css3demos-view {
 
 @lamp_layer_zindex: 5;
 @lamp_shine_layer_zindex: 5;
+@goto_work_layer_zindex: 5;
+@goto_work_2_layer_zindex: 5;
+@spirit_in_car_layer_zindex: 4;
+
+@design_layer_zindex: 2;
+@logo_layer_zindex: 2;
 
 @ray_layer_zindex: 1;
 
@@ -81,6 +184,10 @@ html, body, .css3demos-view {
     animation-fill-mode: @mode;
 }
 
+.animation_direction(@direction:normal) {
+    -webkit-animation-direction: @direction;
+    animation-direction: @direction;
+}
 
 
 
@@ -97,9 +204,16 @@ html, body, .css3demos-view {
 @import "animation-holeOut";
 @import "animation-zoomoutToBottom";
 @import "animation-zoominFromBottom";
+@import "animation-zoominDown";
 @import "animation-shining";
+@import "animation-bounceInDown";
+@import "animation-bounceInRight";
+@import "animation-bounceInUp";
+@import "animation-coinGoDown";
 @import "scene-1";
 @import "scene-2";
 @import "scene-3";
 @import "scene-4";
+@import "scene-5";
+@import "scene-6";
 
