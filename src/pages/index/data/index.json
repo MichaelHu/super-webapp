@@ -14,5 +14,11 @@
         , "abs": "zRender是一个Canvas类库，支持快速绘制基本形状"
     }
 
+    , {
+        "title": "Web Worker"
+        , "url": "webworker" 
+        , "imgurl": "./pages/index/img/webworker.png"
+        , "abs": "专属Worker与共享Worker，运行于主线程之外，可跨页面数据交互"
+    }
 ]
 }

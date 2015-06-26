@@ -1,0 +1,12 @@
+.webworker-pageview {
+    text-align: center;
+}
+
+.webworker-pageview .btn {
+    margin-top: 10px;
+} 
+
+.webworker-pageview .md-container {
+    padding: 10px;
+    text-align: left;
+} 
