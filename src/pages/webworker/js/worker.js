@@ -23,7 +23,7 @@ search(currentMax);
 
 onmessage = function (event) {
     console.log('n: ' + n);
-    if ('stop' == event.data) {
+    if ('pause' == event.data) {
         running = false;
     }
     else if ('start' == event.data) {

@@ -11,6 +11,8 @@ require.config({
         , 'underscore': './bower_components/underscore/underscore'
         , 'rocket-p': './bower_components/rocket-p/dist/rocket-p'
         , 'markdown': './lib/markdown/markdown'
+        , 'react': './lib/react/build/react'
+        , 'jsx': './lib/react/build/JSXTransformer'
 
         , 'zrender': './lib/zrender/zrender'
         , 'zrender/shape/Circle': './lib/zrender/zrender'
@@ -21,15 +23,18 @@ require.config({
         , 'webworker_pageview': './pages/webworker/js/webworker_view'
         , 'zrender_pageview': './pages/zrender/js/zrender_view'
         , 'magic_animation_pageview': './pages/magic_animation/js/magic_animation_view'
+        , 'react_pageview': './pages/react/js/react_view'
 
         , 'main': 'main'
     }
+
     , map: {
         '*': {
             'css': './bower_components/require-css/css'
             , 'text': './bower_components/requirejs-text/text'
         }
     }
+
     , packages: [
         {
             name: 'zrender'
@@ -37,6 +42,7 @@ require.config({
             , main: 'zrender'
         }
     ]
+
     , shim: {
         'bootstrap': {
             deps: [
@@ -77,6 +83,7 @@ function init(){
             , 'webworker': '_defaultHandler:webworker'
             , 'zrender': '_defaultHandler:zrender'
             , 'magic_animation': '_defaultHandler:magic_animation'
+            , 'react': '_defaultHandler:react'
             , '*anything': '_defaultHandler:index'
         }
 

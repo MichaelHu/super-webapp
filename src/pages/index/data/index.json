@@ -20,5 +20,12 @@
         , "imgurl": "./pages/index/img/webworker.png"
         , "abs": "专属Worker与共享Worker，运行于主线程之外，可跨页面数据交互"
     }
+
+    , {
+        "title": "ReactJS"
+        , "url": "react" 
+        , "imgurl": "./pages/index/img/react.png"
+        , "abs": "Learn once, write everywhere. React & JSX"
+    }
 ]
 }
